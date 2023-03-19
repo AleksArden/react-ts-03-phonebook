@@ -19,7 +19,7 @@ export class App extends Component<{}, IState> {
     filter: '',
   };
   componentDidMount = (): void => {
-    const contacts: IContact[] | null = JSON.parse(localStorage.getItem('contacts') ||'');
+    const contacts: IContact[] | null = JSON.parse(localStorage.getItem('contacts') ||'null');
     if (contacts) {
       this.setState({ contacts });
     }
